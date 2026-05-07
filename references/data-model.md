@@ -641,7 +641,9 @@
 
 | 요청 유형 | 읽을 문서 | 출력 |
 |---|---|---|
-| 새 작품 기획 | project-bible-workflow, genre-grammar, concept-title, planning-template | 빠른 기획서 또는 전체 바이블 |
+| 새 작품 기획 | premise-validation-lab, reader-persona-demand-map, project-bible-workflow, genre-grammar, concept-title, planning-template | 빠른 기획서 또는 전체 바이블 |
+| 콘셉트 검증 | premise-validation-lab, commercial-market-fit, concept-title | 콘셉트 검증, 보정 후보 |
+| 독자 페르소나 | reader-persona-demand-map, reader-retention-diagnostics | 주 독자, 클릭/결제/이탈 동기 |
 | 상업성 진단 | commercial-market-fit, reader-retention-diagnostics, serialization-strategy | 상업성 점수, 보강 우선순위 |
 | 레퍼런스 리서치 | reference-research-protocol, commercial-market-fit, genre-reference-matrix | 레퍼런스 요약, 일반화 기준 |
 | 장르 문법 점검 | genre-grammar, reader-retention-diagnostics | 장르 계약 진단 |
@@ -649,16 +651,20 @@
 | 장르 심화 설계 | genre-deep-dive-cards, episode-roadmap, paid-conversion-model | 장르별 초반/유료화 설계 |
 | 트로프 조합 | trope-combination-library, concept-title | 조합 공식, 콘셉트 후보 |
 | 제목/소개글 | concept-title, serialization-strategy | 제목 후보, 소개글, 태그 |
+| 메타데이터 생성 | blurb-and-metadata-generator, concept-title, platform-packaging-model | 제목 세트, 소개글, 태그 |
 | 1화 훅 | opening-hook-library, reader-retention-diagnostics | 첫 화면, 엔딩 훅, 리라이트 처방 |
 | 성장물 설계 | growth-loop-model, data-model | 성장 루프, 보상 체감표 |
 | 인물 설계 | character-function-model | 인물 기능표, 적대자 사다리 |
 | 회차표 | episode-roadmap, reader-retention-diagnostics | 회차 카드, 구간별 목표 |
 | 유료화 전략 | paid-conversion-model, serialization-strategy, episode-roadmap | 무료분 목표, 유료화 후보 |
+| 장기 시리즈 설계 | series-architecture-and-escalation, foreshadowing-system, episode-roadmap | 시즌 구조, 확장 사다리 |
 | 플랫폼 패키징 | platform-packaging-model, serialization-strategy | 플랫폼 성격, 제목/태그/소개글 방향 |
 | 지식재산 확장 | ip-adaptation-model, commercial-market-fit | IP 확장성 진단 |
 | 품질 게이트 | quality-gates-and-stress-tests, reader-retention-diagnostics | 10초/5화/25화/50화 테스트 |
 | 떡밥 설계 | foreshadowing-system, continuity-workflow | 떡밥표, 회수 범위 |
-| 기존 원고 분석 | draft-bible-analysis, reader-retention-diagnostics | 회차 기능 분석, 이탈 위험 |
+| 기존 원고 분석 | draft-bible-analysis, reader-retention-diagnostics, review-rubric | 회차 기능 분석, 이탈 위험, 리뷰 점수 |
+| 수정 처방 | revision-playbooks, review-rubric, reader-retention-diagnostics | 리라이트 지시, 회차표 수정 |
+| 제작 파이프라인 | production-pipeline, project-bible-workflow, continuity-workflow | 작업 순서, 산출물, 검수 기준 |
 | 설정집 정리 | project-bible-workflow, continuity-workflow | 바이블 구조, 연속성 관리 |
 
 ## 26. 원고/바이블 분석 데이터
@@ -778,3 +784,47 @@
 | 테스트_유형 | 10초 / 5화 / 25화 / 50화 / 유료화신뢰 / 제목제거 / 보상제거 / 적대자교체 |
 | 실패_등급 | 낮음 / 중간 / 높음 / 치명 |
 | 수정_영역 | 제목 / 콘셉트 / 1화 / 회차표 / 인물기능 / 성장루프 / 플랫폼패키징 |
+
+## 37. 독자 페르소나 데이터
+
+| 필드 | 값 유형 |
+|---|---|
+| 독자_페르소나 | 성장추적 / 사이다추구 / 최적화공략 / 지위상승 / 관계몰입 / 전문성감탄 / 생존긴장 / 운영건설 / 무대응원 / 미스터리추적 / 힐링안정 |
+| 구매_욕망 | 성장 / 복수 / 전략 / 인정 / 감정 / 전문성 / 생존 / 운영 / 응원 / 진실 / 안정 |
+| 클릭_신호 | 장르키워드 / 처지 / 우위 / 관계 / 위기 / 모순 / 보상 |
+| 결제_신뢰 | 반복보상증명 / 중간사이다 / 관계전환 / 공개인정 / 큰위기개방 |
+| 이탈_원인 | 성장무체감 / 고구마과잉 / 정보만능 / 관계장식 / 설명강의화 / 고통누적 / 목표흐림 |
+
+## 38. 콘셉트 검증 데이터
+
+| 필드 | 값 유형 |
+|---|---|
+| 검증_단계 | 장르 / 독자 / 처지 / 우위 / 루프 / 보상 / 확장 |
+| 콘셉트_위험 | 문학적이나안팔림 / 클릭은되나유지약함 / 초반만강함 / 차별화과잉 / 너무안전함 / 주인공약함 |
+| 차별화_위치 | 주인공처지 / 특수우위 / 보상조건 / 무대 / 적대자 / 장기진실 |
+| 테스트 | 제목연결 / 1화연결 / 5화연결 / 유료화연결 / 장기연결 / IP연결 |
+
+## 39. 시리즈 아키텍처 데이터
+
+| 필드 | 값 유형 |
+|---|---|
+| 확장_단계 | 개인 / 생활권 / 조직 / 지역업계 / 사회국가 / 세계신화 |
+| 아크_유형 | 생존 / 시험검증 / 복수사이다 / 관계전환 / 자원확보 / 진실추적 / 공개인정 / 운영정치 |
+| 적대자_단계 | 개인적 / 문지기 / 경쟁자 / 조직적 / 가치관적 / 최종적 |
+| 인플레이션_방지 | 응용 / 한계 / 대가 / 정치비용 / 관계비용 / 책임증가 |
+
+## 40. 수정 처방 데이터
+
+| 필드 | 값 유형 |
+|---|---|
+| 문제_유형 | 장르흐림 / 1화지연 / 주인공수동 / 보상지연 / 설정과밀 / 빌런평면 / 사이다약함 / 로맨스장식 / 성장무체감 / 반복피로 / 유료화불신 / 떡밥과잉 |
+| 처방_유형 | 앞당김 / 삭제 / 체감화 / 선택추가 / 대가추가 / 기능통합 / 보상삽입 / 훅구체화 |
+| 수정_대상 | 제목 / 소개글 / 1화 / 회차표 / 인물 / 성장루프 / 떡밥표 / 유료화지점 |
+
+## 41. 제작 파이프라인 데이터
+
+| 필드 | 값 유형 |
+|---|---|
+| 제작_단계 | 아이디어 / 콘셉트검증 / 독자계약 / 바이블 / 회차표 / 원고 / 검수 / 수정 / 연재전략 / 연속성관리 |
+| 산출물 | 한줄콘셉트 / 제목후보 / 장르계약 / 인물표 / 성장루프 / 회차카드 / 진단표 / 수정지시 / 유료화계획 |
+| 통과_기준 | 10초테스트 / 5화테스트 / 25화테스트 / 유료화신뢰 / 50화확장 |

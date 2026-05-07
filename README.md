@@ -15,6 +15,8 @@
 
 - 한국 웹소설 신작 기획
 - 장르 문법 점검
+- 콘셉트 상업성 검증
+- 독자 페르소나와 구매 욕망 분석
 - 상업성 진단
 - 제목 후보와 소개글 설계
 - 핵심 독자층과 독자 보상 정리
@@ -25,6 +27,9 @@
 - 유료화 후보 지점 설계
 - 장기 떡밥과 회수표 작성
 - 기존 원고/설정집/작품 바이블 진단
+- 원고/기획 리뷰와 수정 처방
+- 장기 시리즈 확장 구조 설계
+- 제작 파이프라인 설계
 - 웹툰, 영상, 오디오, 게임 등 IP 확장성 점검
 
 ---
@@ -409,6 +414,46 @@ $k-webnovel-architect 로 1화 훅을 고쳐줘.
 
 ---
 
+### 10. 콘셉트 검증
+
+아이디어가 상업 연재형 작품으로 버틸 수 있는지 검증합니다.
+
+검증 항목:
+
+- 장르가 선명한가
+- 핵심 독자가 분명한가
+- 주인공 처지가 클릭을 만드는가
+- 특수 우위가 반복 보상을 만들 수 있는가
+- 5화 안에 재미를 증명할 수 있는가
+- 50화 이상 확장 가능한가
+
+관련 문서:
+
+- `references/premise-validation-lab.md`
+- `references/reader-persona-demand-map.md`
+
+---
+
+### 11. 수정 처방과 제작 파이프라인
+
+진단 결과를 실제 작업 지시로 바꿉니다.
+
+예를 들어:
+
+- 1화에서 어떤 설명을 삭제할지
+- 어떤 장르 신호를 앞당길지
+- 어떤 인물 기능을 합치거나 바꿀지
+- 회차표의 어느 화에 보상과 훅을 추가할지
+- 제목과 소개글을 어떤 방향으로 고칠지
+
+관련 문서:
+
+- `references/revision-playbooks.md`
+- `references/production-pipeline.md`
+- `references/review-rubric.md`
+
+---
+
 ## 파일 구조
 
 ```text
@@ -417,6 +462,7 @@ k-webnovel-architect/
 ├── agents/
 │   └── openai.yaml
 └── references/
+    ├── blurb-and-metadata-generator.md
     ├── character-function-model.md
     ├── commercial-market-fit.md
     ├── concept-title.md
@@ -434,11 +480,17 @@ k-webnovel-architect/
     ├── paid-conversion-model.md
     ├── planning-template.md
     ├── platform-packaging-model.md
+    ├── premise-validation-lab.md
+    ├── production-pipeline.md
     ├── project-bible-workflow.md
     ├── quality-gates-and-stress-tests.md
+    ├── reader-persona-demand-map.md
     ├── reader-retention-diagnostics.md
     ├── reference-research-protocol.md
+    ├── review-rubric.md
+    ├── revision-playbooks.md
     ├── serialization-strategy.md
+    ├── series-architecture-and-escalation.md
     └── trope-combination-library.md
 ```
 
@@ -449,6 +501,8 @@ k-webnovel-architect/
 | 문서 | 역할 |
 |---|---|
 | `data-model.md` | 스킬 내부에서 쓰는 기획 데이터 모델 |
+| `reader-persona-demand-map.md` | 독자 페르소나와 구매 욕망 지도 |
+| `premise-validation-lab.md` | 콘셉트 상업성 검증 |
 | `commercial-market-fit.md` | 상업성, 클릭성, 유료화 신뢰 진단 |
 | `genre-grammar.md` | 기본 장르 문법과 장르 혼합 원칙 |
 | `genre-reference-matrix.md` | 다양한 장르 슬롯과 핵심 보상 지도 |
@@ -460,6 +514,7 @@ k-webnovel-architect/
 | `episode-roadmap.md` | 회차표와 아크 카드 |
 | `opening-hook-library.md` | 1화 훅과 엔딩 훅 설계 |
 | `paid-conversion-model.md` | 유료화 지점 설계 |
+| `series-architecture-and-escalation.md` | 장기 시리즈 확장 구조 |
 | `reader-retention-diagnostics.md` | 독자 이탈 위험 진단 |
 | `serialization-strategy.md` | 연재 전략과 무료분/유료분 구조 |
 | `platform-packaging-model.md` | 플랫폼 성격별 패키징 |
@@ -470,6 +525,10 @@ k-webnovel-architect/
 | `reference-research-protocol.md` | 외부 레퍼런스 분석 프로토콜 |
 | `ip-adaptation-model.md` | IP 확장성 점검 |
 | `quality-gates-and-stress-tests.md` | 10초/5화/25화/50화 테스트 |
+| `review-rubric.md` | 원고/기획 리뷰 점수표 |
+| `revision-playbooks.md` | 문제별 수정 처방 |
+| `production-pipeline.md` | 기획부터 연재 운영까지 제작 파이프라인 |
+| `blurb-and-metadata-generator.md` | 제목, 소개글, 태그 생성 기준 |
 | `planning-template.md` | 사용자 출력용 기획서 템플릿 |
 
 ---
@@ -560,4 +619,3 @@ Skill is valid!
 - 기존 원고/설정집 분석 템플릿 개선
 
 기여할 때도 특정 작품의 고유 설정, 문장, 회차 사건을 그대로 넣지 말고, 일반화된 판단 기준으로 정리하는 것을 권장합니다.
-

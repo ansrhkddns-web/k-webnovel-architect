@@ -72,6 +72,8 @@ Use these templates for user-facing outputs. Keep explanations friendly and conc
 ### 1. 독자 계약
 - 주 장르 슬롯:
 - 보조 장르 슬롯:
+- 주 독자 페르소나:
+- 보조 독자 페르소나:
 - 클릭 전 약속:
 - 1화 약속:
 - 5화 약속:
@@ -95,6 +97,17 @@ Use these templates for user-facing outputs. Keep explanations friendly and conc
 - 반복 사건:
 - 보상 사다리:
 - 차별화:
+
+### 3-1. 콘셉트 검증
+| 검증 | 판단 | 보완 |
+|---|---|---|
+| 장르 |  |  |
+| 독자 |  |  |
+| 처지 |  |  |
+| 우위 |  |  |
+| 루프 |  |  |
+| 보상 |  |  |
+| 확장 |  |  |
 
 ### 4. 반복 보상
 | 보상 | 발생 조건 | 체감 장면 | 주변 반응 | 다음 위험 |
@@ -148,6 +161,12 @@ Use these templates for user-facing outputs. Keep explanations friendly and conc
 | 5화 테스트 |  |  |
 | 25화 테스트 |  |  |
 | 유료화 신뢰 |  |  |
+
+### 12. 다음 작업 파이프라인
+- 작성할 문서:
+- 먼저 고칠 것:
+- 다음 회차 작업:
+- 검수 기준:
 ```
 
 ## Full Project Bible
@@ -177,6 +196,8 @@ Use these templates for user-facing outputs. Keep explanations friendly and conc
 
 ## 2. 핵심 독자층
 - 주 독자:
+- 주 독자 페르소나:
+- 보조 독자 페르소나:
 - 독자가 원하는 보상:
 - 반드시 지켜야 할 장르 약속:
 - 피해야 할 이탈 포인트:
@@ -193,6 +214,17 @@ Use these templates for user-facing outputs. Keep explanations friendly and conc
 - 반복 사건 엔진:
 - 보상 사다리:
 - 차별화:
+
+## 3-2. 콘셉트 검증
+| 검증 | 통과 여부 | 문제 | 보완 |
+|---|---|---|---|
+| 장르 |  |  |  |
+| 독자 |  |  |  |
+| 처지 |  |  |  |
+| 우위 |  |  |  |
+| 루프 |  |  |  |
+| 보상 |  |  |  |
+| 확장 |  |  |  |
 
 ## 4. 제목 후보
 | 유형 | 후보 | 장점 | 리스크 |
@@ -245,6 +277,13 @@ Use these templates for user-facing outputs. Keep explanations friendly and conc
 - 11-25화:
 - 26-50화:
 - 51-100화:
+
+## 10-1. 시리즈 아키텍처
+| 시즌 | 범위 | 시즌 질문 | 핵심 보상 | 큰 사이다 | 다음 씨앗 |
+|---|---|---|---|---|---|
+| 1 |  |  |  |  |  |
+| 2 |  |  |  |  |  |
+| 3 |  |  |  |  |  |
 
 ## 11. 연재 전략
 - 핵심 태그:
@@ -305,6 +344,16 @@ Use these templates for user-facing outputs. Keep explanations friendly and conc
 | 25화 테스트 |  |  |  |
 | 50화 테스트 |  |  |  |
 | 유료화 신뢰 |  |  |  |
+
+## 16. 제작 파이프라인
+| 단계 | 산출물 | 통과 기준 | 다음 작업 |
+|---|---|---|---|
+| 콘셉트 |  |  |  |
+| 바이블 |  |  |  |
+| 회차표 |  |  |  |
+| 원고 |  |  |  |
+| 검수 |  |  |  |
+| 수정 |  |  |  |
 ```
 
 ## Diagnostic Output
@@ -356,6 +405,33 @@ Use these templates for user-facing outputs. Keep explanations friendly and conc
 1.
 2.
 3.
+```
+
+## Revision Plan Output
+
+```markdown
+## 수정 처방
+
+### 우선 수정
+1.
+2.
+3.
+
+### 1화 수정
+- 삭제할 설명:
+- 앞당길 장르 신호:
+- 추가할 선택/대가:
+- 새 엔딩 훅:
+
+### 회차표 수정
+| 화 | 문제 | 수정 방향 | 새 보상 | 새 훅 |
+|---|---|---|---|---|
+|  |  |  |  |  |
+
+### 패키징 수정
+- 새 제목 방향:
+- 새 소개글 약속:
+- 태그 보정:
 ```
 
 ## Reference Research Output
