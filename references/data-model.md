@@ -4,7 +4,7 @@
 
 상위 판매권 500개 작품군을 기준 표본으로 삼고, 공개적으로 확인 가능한 랭킹, 장르 분포, 조회수, 유료 전환, 장기 연재, 웹툰화, 영상화, 게임화, 팬덤 확장 신호에서 반복되는 설계 데이터를 축적한다.
 
-특정 작품명, 샘플 작품 분석, 줄거리 예시는 기록하지 않는다. 사용자는 결과물에서 필요한 항목만 본다.
+특정 작품명, 줄거리 예시, 고유 사건은 기록하지 않는다. 사용자는 결과물에서 필요한 항목만 본다.
 
 ## 0. 표본 기준 데이터
 
@@ -43,7 +43,7 @@
 | 가정_요소 | 임시로 잡은 설정 |
 | 미정_요소 | 아직 결정하지 않은 설정 |
 | 금지_요소 | 사용자가 원하지 않는 방향 |
-| 목표_결과물 | 간단 기획서 / 작품 기획서 / 장르 진단 / 1화 설계 / 장기 로드맵 |
+| 목표_결과물 | 간단 기획서 / 작품 기획서 / 장르 진단 / 1화 설계 / 장기 로드맵 / 회차 브리프 / 스킬 평가 |
 | 목표_분량 | 단편 / 중편 / 100화 이하 / 100-300화 / 300화 이상 |
 | 목표_플랫폼 | 카카오페이지 / 네이버시리즈 / 문피아 / 리디 / 조아라 / 개인 연재 / 공모전 |
 
@@ -645,22 +645,24 @@
 | 콘셉트 검증 | premise-validation-lab, commercial-market-fit, concept-title | 콘셉트 검증, 보정 후보 |
 | 독자 페르소나 | reader-persona-demand-map, reader-retention-diagnostics | 주 독자, 클릭/결제/이탈 동기 |
 | 상업성 진단 | commercial-market-fit, reader-retention-diagnostics, serialization-strategy | 상업성 점수, 보강 우선순위 |
-| 레퍼런스 리서치 | reference-research-protocol, commercial-market-fit, genre-reference-matrix | 레퍼런스 요약, 일반화 기준 |
+| 레퍼런스 리서치 | reference-research-protocol, platform-research-checklists, commercial-market-fit, genre-reference-matrix | 레퍼런스 요약, 일반화 기준 |
 | 장르 문법 점검 | genre-grammar, reader-retention-diagnostics | 장르 계약 진단 |
 | 장르 슬롯 선택 | genre-reference-matrix, trope-combination-library | 주 장르/보조 장르, 필수 엔진 |
-| 장르 심화 설계 | genre-deep-dive-cards, episode-roadmap, paid-conversion-model | 장르별 초반/유료화 설계 |
+| 장르 심화 설계 | genre-deep-dive-cards, genre-specialized-deep-dives, episode-roadmap, paid-conversion-model | 장르별 초반/유료화 설계 |
 | 트로프 조합 | trope-combination-library, concept-title | 조합 공식, 콘셉트 후보 |
 | 제목/소개글 | concept-title, serialization-strategy | 제목 후보, 소개글, 태그 |
 | 메타데이터 생성 | blurb-and-metadata-generator, concept-title, platform-packaging-model | 제목 세트, 소개글, 태그 |
 | 1화 훅 | opening-hook-library, reader-retention-diagnostics | 첫 화면, 엔딩 훅, 리라이트 처방 |
 | 성장물 설계 | growth-loop-model, data-model | 성장 루프, 보상 체감표 |
 | 인물 설계 | character-function-model | 인물 기능표, 적대자 사다리 |
-| 회차표 | episode-roadmap, reader-retention-diagnostics | 회차 카드, 구간별 목표 |
+| 회차표 | episode-roadmap, episode-brief-generator, reader-retention-diagnostics | 회차 카드, 구간별 목표 |
+| 회차 브리프 | episode-brief-generator, chapter-production-brief, episode-roadmap, reader-retention-diagnostics | 원고 작성용 회차 지시서 |
 | 유료화 전략 | paid-conversion-model, serialization-strategy, episode-roadmap | 무료분 목표, 유료화 후보 |
 | 장기 시리즈 설계 | series-architecture-and-escalation, foreshadowing-system, episode-roadmap | 시즌 구조, 확장 사다리 |
 | 플랫폼 패키징 | platform-packaging-model, serialization-strategy | 플랫폼 성격, 제목/태그/소개글 방향 |
 | 지식재산 확장 | ip-adaptation-model, commercial-market-fit | IP 확장성 진단 |
 | 품질 게이트 | quality-gates-and-stress-tests, reader-retention-diagnostics | 10초/5화/25화/50화 테스트 |
+| 스킬 평가 | evaluation-prompts, output-quality-rubric, planning-template | 평가 프롬프트, 품질 점수, 보완 우선순위 |
 | 떡밥 설계 | foreshadowing-system, continuity-workflow | 떡밥표, 회수 범위 |
 | 기존 원고 분석 | draft-bible-analysis, reader-retention-diagnostics, review-rubric | 회차 기능 분석, 이탈 위험, 리뷰 점수 |
 | 수정 처방 | revision-playbooks, review-rubric, reader-retention-diagnostics | 리라이트 지시, 회차표 수정 |
@@ -826,5 +828,16 @@
 | 필드 | 값 유형 |
 |---|---|
 | 제작_단계 | 아이디어 / 콘셉트검증 / 독자계약 / 바이블 / 회차표 / 원고 / 검수 / 수정 / 연재전략 / 연속성관리 |
-| 산출물 | 한줄콘셉트 / 제목후보 / 장르계약 / 인물표 / 성장루프 / 회차카드 / 진단표 / 수정지시 / 유료화계획 |
+| 산출물 | 한줄콘셉트 / 제목후보 / 장르계약 / 인물표 / 성장루프 / 회차카드 / 회차브리프 / 진단표 / 평가표 / 수정지시 / 유료화계획 |
 | 통과_기준 | 10초테스트 / 5화테스트 / 25화테스트 / 유료화신뢰 / 50화확장 |
+
+## 42. 평가와 회차 브리프 데이터
+
+| 묶음 | 필드 |
+|---|---|
+| 평가_프롬프트 | 요청상황 / 입력자료 / 기대산출물 / 실패조건 / 검증항목 |
+| 품질_루브릭 | 요청적합성 / 장르명료도 / 독자페르소나 / 상업성판단 / 콘셉트검증 / 회차기능 / 이탈위험 / 수정처방 / 고유데이터보호 |
+| 회차_브리프 | 회차번호 / 회차기능 / 시작압박 / 주인공목표 / 필수장면 / 독자보상 / 체감증거 / 주변반응 / 떡밥 / 엔딩훅 / 다음화인계 |
+| 원고_제작_브리프 | 장면순서 / 대사포인트 / 액션포인트 / 관계변화 / 설정공개범위 / 금지요소 / 문장톤 / 엔딩문장방향 |
+| 플랫폼_리서치 | 플랫폼 / 장르페이지 / 제목신호 / 소개글약속 / 리뷰반응 / 유료화관습 / 공모전조건 / 최신확인필요 |
+| 세부_장르_심화 | 장르슬롯 / 구매이유 / 제목신호 / 1화필수 / 5화보상 / 반복보상 / 유료화훅 / 이탈위험 / 보정방식 |

@@ -1,4 +1,4 @@
 interface:
   display_name: "K-Webnovel Architect"
-  short_description: "상업형 한국 웹소설 기획, 검증, 리뷰, 유료화 설계"
-  default_prompt: "Use $k-webnovel-architect to build and validate a commercially viable Korean webnovel project bible with reader personas, genre slots, trope combinations, growth loops, episode roadmaps, platform packaging, revision playbooks, retention diagnostics, IP expansion checks, and paid-conversion pacing."
+  short_description: "상업형 한국 웹소설 기획, 진단, 회차 브리프, 유료화 설계"
+  default_prompt: "Use $k-webnovel-architect to build, diagnose, and refine a commercially viable Korean webnovel project bible with reader personas, genre slots, trope combinations, growth loops, episode roadmaps, chapter production briefs, platform research checklists, output quality rubrics, revision playbooks, retention diagnostics, IP expansion checks, and paid-conversion pacing."

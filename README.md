@@ -3,7 +3,7 @@
 **한국 웹소설을 상업 연재 가능한 작품 바이블로 설계하고 점검하는 Codex Skill**
 
 `k-webnovel-architect`는 한국 웹소설 기획을 위한 Codex 스킬입니다.  
-아이디어 한 줄에서 시작해 장르 문법, 핵심 독자층, 제목, 소개글, 주인공 욕망, 성장 루프, 인물 기능, 회차 로드맵, 장기 떡밥, 유료화 지점, 플랫폼 패키징, IP 확장성까지 한 번에 설계하고 진단하도록 만들어졌습니다.
+아이디어 한 줄에서 시작해 장르 문법, 핵심 독자층, 제목, 소개글, 주인공 욕망, 성장 루프, 인물 기능, 회차 로드맵, 회차 집필 지시서, 장기 떡밥, 유료화 지점, 플랫폼 패키징, 품질 평가, IP 확장성까지 한 번에 설계하고 진단하도록 만들어졌습니다.
 
 이 스킬은 단순한 글쓰기 조언용이 아니라, **상업 연재형 장르물 기획서와 작품 바이블을 만들기 위한 작업 도구**입니다.
 
@@ -24,12 +24,15 @@
 - 성장물의 보상 루프 설계
 - 인물 기능표 작성
 - 1화 훅과 초반 무료분 설계
+- 회차 집필 지시서 생성
 - 유료화 후보 지점 설계
 - 장기 떡밥과 회수표 작성
+- 플랫폼별 리서치 체크리스트 작성
 - 기존 원고/설정집/작품 바이블 진단
 - 원고/기획 리뷰와 수정 처방
 - 장기 시리즈 확장 구조 설계
 - 제작 파이프라인 설계
+- 스킬 출력 품질 테스트
 - 웹툰, 영상, 오디오, 게임 등 IP 확장성 점검
 
 ---
@@ -102,6 +105,40 @@ git clone https://github.com/ansrhkddns-web/k-webnovel-architect.git ~/.codex/sk
 
 ---
 
+## Quick Start
+
+처음 쓰는 경우에는 아래 순서로 요청하면 됩니다.
+
+1. 먼저 장르와 독자층을 잡습니다.
+
+```text
+$k-webnovel-architect 로 현대판타지 신작을 기획해줘.
+장르 문법, 핵심 독자층, 한 줄 콘셉트, 제목 후보부터 잡아줘.
+```
+
+2. 콘셉트가 팔릴 구조인지 점검합니다.
+
+```text
+$k-webnovel-architect 로 이 콘셉트의 상업성을 진단해줘.
+클릭성, 반복 보상, 5화 유지력, 유료화 신뢰를 점수화해줘.
+```
+
+3. 1화부터 유료화 지점까지 회차 구조를 만듭니다.
+
+```text
+$k-webnovel-architect 로 1~25화 로드맵을 만들어줘.
+각 화의 기능, 보상, 엔딩 훅, 이탈 위험을 표로 정리해줘.
+```
+
+4. 실제 원고 작성 전 회차 브리프를 뽑습니다.
+
+```text
+$k-webnovel-architect 로 3화 회차 브리프를 만들어줘.
+장면 순서, 반드시 넣을 보상, 피해야 할 설명, 엔딩 훅을 정리해줘.
+```
+
+---
+
 ## 사용 예시
 
 Codex에게 아래처럼 요청하면 됩니다.
@@ -129,6 +166,11 @@ $k-webnovel-architect 로 상업성 진단을 해줘.
 ```text
 $k-webnovel-architect 로 1화 훅을 고쳐줘.
 첫 화면 압박, 장르 신호, 엔딩 훅을 더 강하게 만들어줘.
+```
+
+```text
+$k-webnovel-architect 로 스킬 출력 품질을 평가해줘.
+요청 적합성, 장르 명료도, 상업성 판단, 수정 처방이 충분한지 봐줘.
 ```
 
 ---
@@ -250,6 +292,7 @@ $k-webnovel-architect 로 1화 훅을 고쳐줘.
 - `references/genre-grammar.md`
 - `references/genre-reference-matrix.md`
 - `references/genre-deep-dive-cards.md`
+- `references/genre-specialized-deep-dives.md`
 
 ---
 
@@ -345,6 +388,8 @@ $k-webnovel-architect 로 1화 훅을 고쳐줘.
 
 - `references/episode-roadmap.md`
 - `references/opening-hook-library.md`
+- `references/episode-brief-generator.md`
+- `references/chapter-production-brief.md`
 
 ---
 
@@ -367,6 +412,7 @@ $k-webnovel-architect 로 1화 훅을 고쳐줘.
 - `references/paid-conversion-model.md`
 - `references/serialization-strategy.md`
 - `references/platform-packaging-model.md`
+- `references/platform-research-checklists.md`
 
 ---
 
@@ -454,32 +500,85 @@ $k-webnovel-architect 로 1화 훅을 고쳐줘.
 
 ---
 
+### 12. 평가 프롬프트와 품질 루브릭
+
+스킬이 “그럴듯한 말”만 하는지, 실제 상업 연재 설계 도구로 작동하는지 점검합니다.
+
+평가 항목:
+
+- 요청에 맞는 산출물을 냈는가
+- 장르와 독자층을 선명하게 잡았는가
+- 제목, 소개글, 1화, 유료화 지점의 약속이 이어지는가
+- 회차 기능과 반복 보상이 구체적인가
+- 이탈 위험을 충분히 찾았는가
+- 약점 지적이 실제 수정 지시로 바뀌었는가
+- 참고한 레퍼런스의 고유 데이터를 복사하지 않았는가
+
+관련 문서:
+
+- `references/evaluation-prompts.md`
+- `references/output-quality-rubric.md`
+
+---
+
+### 13. 회차 집필 지시서
+
+회차 로드맵을 실제 원고 작성 전 단계로 바꿉니다.  
+줄거리 요약이 아니라, 그 화가 독자에게 어떤 기능을 해야 하는지 정리합니다.
+
+브리프에 포함되는 내용:
+
+- 회차 기능
+- 시작 압박
+- 주인공 목표
+- 장면 순서
+- 반드시 넣을 독자 보상
+- 체감 증거와 주변 반응
+- 심거나 회수할 떡밥
+- 피해야 할 이탈 요소
+- 엔딩 훅
+- 다음 화 인계
+
+관련 문서:
+
+- `references/episode-brief-generator.md`
+- `references/chapter-production-brief.md`
+
+---
+
 ## 파일 구조
 
 ```text
 k-webnovel-architect/
 ├── SKILL.md
+├── LICENSE
 ├── agents/
 │   └── openai.yaml
 └── references/
     ├── blurb-and-metadata-generator.md
+    ├── chapter-production-brief.md
     ├── character-function-model.md
     ├── commercial-market-fit.md
     ├── concept-title.md
     ├── continuity-workflow.md
     ├── data-model.md
     ├── draft-bible-analysis.md
+    ├── episode-brief-generator.md
     ├── episode-roadmap.md
+    ├── evaluation-prompts.md
     ├── foreshadowing-system.md
     ├── genre-deep-dive-cards.md
     ├── genre-grammar.md
     ├── genre-reference-matrix.md
+    ├── genre-specialized-deep-dives.md
     ├── growth-loop-model.md
     ├── ip-adaptation-model.md
     ├── opening-hook-library.md
+    ├── output-quality-rubric.md
     ├── paid-conversion-model.md
     ├── planning-template.md
     ├── platform-packaging-model.md
+    ├── platform-research-checklists.md
     ├── premise-validation-lab.md
     ├── production-pipeline.md
     ├── project-bible-workflow.md
@@ -507,11 +606,14 @@ k-webnovel-architect/
 | `genre-grammar.md` | 기본 장르 문법과 장르 혼합 원칙 |
 | `genre-reference-matrix.md` | 다양한 장르 슬롯과 핵심 보상 지도 |
 | `genre-deep-dive-cards.md` | 장르별 1화, 5화, 반복 보상, 유료화 훅 |
+| `genre-specialized-deep-dives.md` | 세부 장르와 변형 장르의 구매 이유, 유료화 훅, 이탈 위험 |
 | `trope-combination-library.md` | 트로프 조합 공식 |
 | `concept-title.md` | 제목, 한 줄 콘셉트, 소개글 설계 |
 | `growth-loop-model.md` | 성장/보상 루프 설계 |
 | `character-function-model.md` | 인물 기능 설계 |
 | `episode-roadmap.md` | 회차표와 아크 카드 |
+| `episode-brief-generator.md` | 회차별 집필 지시서 생성 기준 |
+| `chapter-production-brief.md` | 장면 순서와 원고 제작 브리프 기준 |
 | `opening-hook-library.md` | 1화 훅과 엔딩 훅 설계 |
 | `paid-conversion-model.md` | 유료화 지점 설계 |
 | `series-architecture-and-escalation.md` | 장기 시리즈 확장 구조 |
@@ -523,8 +625,11 @@ k-webnovel-architect/
 | `project-bible-workflow.md` | 작품 바이블 폴더/문서 구조 |
 | `draft-bible-analysis.md` | 기존 원고와 설정집 분석법 |
 | `reference-research-protocol.md` | 외부 레퍼런스 분석 프로토콜 |
+| `platform-research-checklists.md` | 플랫폼별 리서치 체크리스트 |
 | `ip-adaptation-model.md` | IP 확장성 점검 |
 | `quality-gates-and-stress-tests.md` | 10초/5화/25화/50화 테스트 |
+| `evaluation-prompts.md` | 스킬 평가용 대표 요청 프롬프트 |
+| `output-quality-rubric.md` | 스킬 산출물 품질 점수표 |
 | `review-rubric.md` | 원고/기획 리뷰 점수표 |
 | `revision-playbooks.md` | 문제별 수정 처방 |
 | `production-pipeline.md` | 기획부터 연재 운영까지 제작 파이프라인 |
@@ -586,6 +691,37 @@ k-webnovel-architect/
 | 2 |  |  |  |  |  |
 ```
 
+### 회차 브리프
+
+```markdown
+## 3화 회차 브리프
+
+### 회차 기능
+- 반복 보상을 두 번째로 증명하고, 더 큰 무대의 입구를 보여준다.
+
+### 장면 순서
+| 순서 | 장면 기능 | 핵심 사건 | 보상/변화 | 주의 |
+|---|---|---|---|---|
+| 1 | 시작 압박 |  |  |  |
+| 2 | 주인공 선택 |  |  |  |
+| 3 | 보상 체감 |  |  |  |
+
+### 엔딩 훅
+- 다음 화에서 확인할 구체적 위험 또는 보상:
+```
+
+### 스킬 품질 평가
+
+```markdown
+| 항목 | 점수 | 근거 | 보완 |
+|---|---:|---|---|
+| 요청 적합성 |  |  |  |
+| 장르 명료도 |  |  |  |
+| 상업성 판단 |  |  |  |
+| 회차 기능성 |  |  |  |
+| 고유 데이터 보호 |  |  |  |
+```
+
 ---
 
 ## 검증
@@ -607,14 +743,34 @@ Skill is valid!
 
 ---
 
+## 이 스킬이 하지 않는 것
+
+- 실제 작품의 문장, 회차 사건, 고유 설정을 그대로 복제하지 않습니다.
+- 현재 실시간 랭킹이나 최신 플랫폼 정책을 확인하지 않고 사실처럼 단정하지 않습니다.
+- 저작권이 있는 원문을 길게 재현하거나 요약을 넘어선 대체물을 만들지 않습니다.
+- 상업적 성공을 보장하지 않습니다.
+- 모든 작품을 하나의 공식에 억지로 끼워 맞추지 않습니다.
+
+---
+
+## 라이선스
+
+이 저장소는 MIT License로 배포됩니다. 자세한 내용은 `LICENSE` 파일을 확인하면 됩니다.
+
+---
+
 ## 기여 방향
 
 이 스킬을 더 발전시키고 싶다면 아래 방향의 기여가 좋습니다.
 
 - 장르별 심화 카드 추가
+- 세부 장르 심화 카드 추가
 - 플랫폼별 패키징 체크리스트 보강
+- 플랫폼별 리서치 체크리스트 보강
 - 유료화 지점 사례의 일반화
 - 독자 이탈 유형 세분화
+- 평가 프롬프트와 품질 루브릭 보강
+- 회차 브리프와 원고 제작 브리프 개선
 - IP 확장성 체크리스트 보강
 - 기존 원고/설정집 분석 템플릿 개선
 
