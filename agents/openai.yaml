@@ -1,0 +1,4 @@
+interface:
+  display_name: "K-Webnovel Architect"
+  short_description: "상업형 한국 웹소설 기획, 장르 문법, 바이블, 유료화 설계"
+  default_prompt: "Use $k-webnovel-architect to build a commercially viable Korean webnovel project bible with genre slots, trope combinations, reader rewards, growth loops, platform packaging, foreshadowing, retention diagnostics, and paid-conversion pacing."
